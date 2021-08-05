@@ -1,0 +1,233 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Common Style */
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Navgation Bar */
+nav{
+    margin: 0px 15%;
+    width: 70%;
+    height: 70px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 15%;
+}
+.nav-item ul{
+    list-style: none;
+    display: flex;
+}
+.nav-item ul a{
+    color: #D1D1D1;
+    margin-right: 20px;
+    text-decoration: none;
+}
+/* .top-players{ */
+    
+.container{
+    background-color: #ffffff;
+    width: 66%;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
+}
+
+/* Top Player Style  */
+.sec-title{
+    margin-top: 3px;
+    color: #562EFF;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px;
+}
+.player{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.player img{
+    width: 56px;
+    height: 56px;  
+}
+.pl-name{
+    font-size: 18px;
+    margin-left: 16px;
+}
+hr{
+    margin: 40px 0px;
+    border: 1px solid #D1D1D1;
+}
+/* Top Blogs Styles 
+--------------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+}
+.blog{
+    display: flex;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-author{
+    color: #9f9f9f;
+    font-size: 16px;
+}
+.blog-author a{
+    text-decoration: none;
+    font-size: 18px;
+}
+/*--------------------------------------
+    Latest Course
+----------------------------------------- */
+.courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.course{
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+    border-radius: 3%;
+    box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.658);
+}
+.course .thumbnail img{
+    width: 230px;
+    height: 130px;
+}
+.course-info{
+    width: 230px;}
+.course-title{
+    font-size: 19px;
+}
+.course-author{
+    color: #9f9f9f;
+    font-size: 16px;
+}
+.course-author a{
+    text-decoration: none;
+    font-size: 18px;
+}
+img:hover{
+    cursor: pointer;
+}
+.ratings{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.ratings p{
+    margin: 0px 0px 0px 15px;
+}
+.time{
+    padding: 0px 5%;
+    width: 30%;
+    background-color: #ff797f;
+    border-radius: 10px;
+}
+.rating{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.rating i{
+    color: goldenrod;
+}
+/*-------------------------
+    Media Quiries 
+-------------------------*/
+/* Mobile Devices */
+
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+        padding: 0px;
+    }
+    .sec-title{
+        text-align: center;
+    }
+    .players, .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .top-players{
+        align-items: center;
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    .blog{
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 1px 2px 16px black ;
+    }
+   
+    .course{
+        margin-bottom: 30px;
+        width: 90%;
+        margin: 20px 5%;
+    }
+}
+/* Tablet Device
+------------------------- */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 90%;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .courses{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+    }
+    .course{
+        margin-bottom: 30px;
+    }
+    .sec-title{
+        text-align: center;
+    }
+    .blog{
+        text-align: center;
+        align-items: center;
+        padding: 5%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 10px 40px 80px black;
+        flex-direction: column;
+    }
+    .blog h2{
+        text-overflow: wrap;
+    }
+    .thumbnail img{
+        width: 300px;
+    }
+}
